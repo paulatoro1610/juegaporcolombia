@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JUEGA POR COLOMBIA</title>
+        <link rel="icon" href="logoproyecto.jpg">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body bgcolor="FDF2E9">
+        <header>
+            <div class="logo"> 
+                <img src="logoproyecto.jpg"   alt="logo de la pagina"> 
+            </div>
+            <nav>
+                
+                <a href="inicio.html" class="nav">Inicio</a>
+                <a href="objetivos.html" class="nav">Objetivos</a>
+                <a href="anexos.html" class="nav">Anexos</a>
+            </nav>       
+        </header>
+            <H2>Construccion Ruleta</H2>
+            <div class="ruleta1">
+              <img src="ruleta1.jpeg" alt="ruleta1">  
+            </div>
+            <div class="ruleta2">
+                <img src="ruleta2.jpeg" alt="ruleta2">
+            </div>
+            <div class="final">
+                <img src="finalruleta.jpeg" alt="final">
+            </div>
+            <div class="video">
+            <video src="video ruleta.mp4" controls> </video>
+            </div>
+            <h2>Codigo</h2>
+            <P> int led=2;
+                int sencny=3;
+                int datocny=0;
+                int ld2=5;
+                int sen2=4;
+                int dato2=0;
+                int ld3= 7;
+                int sen3=6;
+                int dato3=0;
+                int sen4=8;
+                int ld4=9;
+                int dato4=0;
+                int sens=12;
+                int ld5=11;
+                int dato5=0;
+                
+                void setup() {
+                 pinMode(led,OUTPUT);
+                 pinMode(sencny,INPUT);
+                 Serial.begin(9600);
+                
+                 pinMode(ld2,OUTPUT);
+                 pinMode(sen2,INPUT);
+                 Serial.begin(9600);
+                
+                 pinMode(ld3,OUTPUT);
+                 pinMode(sen3,INPUT);
+                 Serial.begin(9600);
+                
+                 pinMode(ld4,OUTPUT);
+                 pinMode(sen4,INPUT);
+                 Serial.begin(9600);
+                
+                 pinMode(ld5,OUTPUT);
+                 pinMode(sens,INPUT);
+                 Serial.begin(9600);
+                }
+                void loop() {
+                 datocny=digitalRead(sencny);
+                 digitalWrite(led,datocny);
+                 Serial.println(datocny);
+                
+                 dato2=digitalRead(sen2);
+                 digitalWrite(ld2,dato2);
+                 Serial.println(dato2);
+                
+                 dato2=digitalRead(sen3);
+                 digitalWrite(ld3,dato3);
+                 Serial.println(dato3);
+                
+                 dato2=digitalRead(sen4);
+                 digitalWrite(ld4,dato4);
+                 Serial.println(dato4);
+                
+                 dato2=digitalRead(sens);
+                 digitalWrite(ld5,dato5);
+                 Serial.println(dato5);
+                }
+                </P>
+    </body>
+
+</html>
